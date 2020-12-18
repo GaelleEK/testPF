@@ -1,0 +1,59 @@
+$color-primary: #252934;
+$color-secondary:   #fafafa;
+$color-hover: #f300b4;
+
+$target-bis: if(true, "&", "-bis");
+$target-ter: if(true, "&", "-ter");
+
+.bar {
+  background: $color-secondary;
+  border-radius: 30px;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 80%;
+}
+.bar-bis  {
+  @extend .bar;
+  top: 20px;
+}
+.bar-ter {
+  @extend .bar;
+  top: 30px;
+}
+a.icon:hover {
+  div.bar > div.bar-ter  {
+    background: $color-hover;
+  }
+}
+#btn-menu {
+  &:hover {
+    span:first-of-type{
+      transform: rotate(45deg) translate(7.5px, 7.5px);
+    }
+    span:nth-of-type(2) {
+      width: 0;
+    }
+    span:last-of-type {
+      transform: rotate(-45deg) translate(7.5px, -7.5px);
+    }
+  }
+  span {
+    width: 35px;
+    height: 4px;
+    display: block;
+    margin: 7px auto 0;
+    background: #fafafa;
+    transition: width 0.4s ease, transform 0.4s ease;
+  }
+}
+
+
+#home {
+  background: $color-secondary;
+  position: relative;
+  height: max-content;
+  z-index: 1;
+  padding: 20px;
+}
