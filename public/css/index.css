@@ -1,22 +1,8 @@
-.bar, .bar-ter, .bar-bis {
-  background: #fafafa;
-  border-radius: 30px;
-  height: 5px;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 80%;
+@font-face {
+  font-family: "Overlock";
+  src: local(Overlock), url("../font/Overlock-Black.ttf") format("ttf"), url("../font/overlock-v10-latin-regular.woff") format("woff"), url("../font/overlock-v10-latin-regular.woff2") format("woff2");
 }
-
-.bar-bis {
-  top: 20px;
-}
-
-.bar-ter {
-  top: 30px;
-}
-
-a.icon:hover div.bar > div.bar-ter, a.icon:hover div.bar-bis > div.bar-ter, a.icon:hover div.bar-ter > div.bar-ter {
+a.icon:hover div.bar > div.bar-ter {
   background: #f300b4;
 }
 
@@ -38,12 +24,182 @@ a.icon:hover div.bar > div.bar-ter, a.icon:hover div.bar-bis > div.bar-ter, a.ic
   transition: width 0.4s ease, transform 0.4s ease;
 }
 
+#main {
+  width: 100vw;
+  height: 130vh;
+}
+#main #welcome-section {
+  width: 100vw;
+  height: 100vh;
+  background: #202736;
+  background: -webkit-gradient(linear, left top, left bottom, from(#181d23), color-stop(80%, #202736));
+  background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 90vh;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+}
+#main #welcome-section .moon {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  background: url("../img/Moon.svg") top right no-repeat;
+  width: 100%;
+  height: 150px;
+  z-index: -1;
+  animation: moon-move-in 1.2s 1s forwards;
+  -webkit-animation: moon-move-in 1.2s 1s forwards;
+}
+@keyframes moon-move-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moon-move-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main #welcome-section .wrapper {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+#main #welcome-section .text {
+  color: #fafafa;
+  margin: 0;
+  font-size: 86px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+#main #welcome-section .text .line {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 80px;
+  line-height: 1.5;
+}
+#main #welcome-section .text .line:first-child + .line {
+  margin-left: 80px;
+}
+#main #welcome-section .text .line:first-child + .line + .line {
+  margin-left: 150px;
+}
+#main #welcome-section .text .line > p {
+  margin: 0;
+  height: 80px;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 0.9;
+  white-space: nowrap;
+  animation: moveWords 6s infinite ease;
+}
+#main #welcome-section .text .line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.66667);
+}
+#main #welcome-section .text .line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+}
+@keyframes moveWords {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+#main #welcome-section .stars {
+  position: relative;
+  background: url(../img/Stars.svg);
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: stars-move-in 1000ms 300ms forwards;
+  animation: stars-move-in 1000ms 300ms forwards;
+}
+@-webkit-keyframes stars-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+@keyframes stars-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+#main #welcome-section .forest {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: url("../img/Trees.svg") left repeat-x;
+  background-size: cover;
+  background-origin: content-box;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  -webkit-animation: forest-move-in 1000ms 500ms forwards;
+  animation: forest-move-in 1000ms 500ms forwards;
+}
+@-webkit-keyframes forest-move-in {
+  from {
+    background-position-y: 150%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 100%;
+  }
+}
+@keyframes forest-move-in {
+  from {
+    background-position-y: 150%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 100%;
+  }
+}
+#main div.triangle {
+  width: 0;
+  height: 1910px;
+  position: relative;
+  border-left: 706.7px solid transparent;
+  border-right: 1279.7px solid transparent;
+  border-top: 150px solid black;
+  z-index: -1;
+}
+
 #home {
   background: #fafafa;
-  position: relative;
-  height: max-content;
-  z-index: 1;
   padding: 20px;
+}
+#home #about {
+  text-align: center;
+}
+#home #about .imgMe {
+  height: 15vw;
+  float: left;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,26 +2,14 @@ $color-primary: #252934;
 $color-secondary:   #fafafa;
 $color-hover: #f300b4;
 
-$target-bis: if(true, "&", "-bis");
-$target-ter: if(true, "&", "-ter");
+@font-face {
+  font-family: "Overlock";
+  src: local(Overlock),
+  url("../font/Overlock-Black.ttf") format("ttf"),
+  url("../font/overlock-v10-latin-regular.woff") format("woff"),
+  url("../font/overlock-v10-latin-regular.woff2") format("woff2");
+}
 
-.bar {
-  background: $color-secondary;
-  border-radius: 30px;
-  height: 5px;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 80%;
-}
-.bar-bis  {
-  @extend .bar;
-  top: 20px;
-}
-.bar-ter {
-  @extend .bar;
-  top: 30px;
-}
 a.icon:hover {
   div.bar > div.bar-ter  {
     background: $color-hover;
@@ -49,11 +37,210 @@ a.icon:hover {
   }
 }
 
+$width-triangle: 0;
+$height-triangle: 1910px;
+@function left-triangle($height-triangle) {
+  $size: (($height-triangle/100)*37);
+  @return $size
+}
+@function right-triangle($height-triangle) {
+  $size: (($height-triangle/100)*67);
+  @return $size
+}
 
+#main {
+  width: 100vw;
+  height: 130vh;
+  #welcome-section{
+    width: 100vw;
+    height: 100vh;
+    background: #202736;
+    background: -webkit-gradient(linear, left top, left bottom, from(#181d23), color-stop(80%, #202736));
+    background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 90vh;
+    margin: 0 auto;
+    z-index: 1;
+    overflow: hidden;
+
+    .moon {
+      position: absolute;
+      top: 80px;
+      right: 150px;
+      background: url("../img/Moon.svg") top right no-repeat;
+      width: 100%;
+      height: 150px;
+      z-index: -1;
+      animation: moon-move-in 1.2s 1s forwards;
+      -webkit-animation: moon-move-in 1.2s 1s forwards;
+    }
+    @keyframes moon-move-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+
+      }
+    }
+    @-webkit-keyframes moon-move-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .wrapper {
+      position: absolute;
+      top:30%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text {
+      color: $color-secondary;
+      margin: 0;
+      font-size: 86px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      .line {
+        overflow: hidden;
+        white-space: nowrap;
+        height: 80px;
+        line-height: 1.5;
+        &:first-child {
+          & + .line {
+            margin-left: 80px;
+            &+ .line {
+              margin-left: 150px;
+            }
+          }
+        }
+        > p {
+          margin: 0;
+          height: 80px;
+          overflow: hidden;
+          font-size: 1em;
+          line-height: .9;
+          white-space: nowrap;
+          animation: moveWords 6s infinite ease;
+        }
+      }
+      .line:nth-child(odd) {
+        transform: skew(60deg,-30deg) scaleY(.66667);
+      }
+      .line:nth-child(even) {
+        transform: skew(0deg,-30deg) scaleY(1.33333);
+      }
+    }
+
+    @keyframes moveWords {
+      0% {
+        transform: translateY(0%);
+      }
+      50% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+    .stars {
+      position: relative;
+      background: url(../img/Stars.svg);
+      width: 100%;
+      min-height: 100vh;
+      z-index: -1;
+      opacity: 0;
+      -webkit-animation: stars-move-in 1000ms 300ms forwards;
+      animation: stars-move-in 1000ms 300ms forwards;
+
+    }
+
+    @-webkit-keyframes stars-move-in {
+      from {
+        background-position-y: -100px;
+      }
+      to {
+        opacity: 1;
+        background-position-y: 0;
+      }
+    }
+
+    @keyframes stars-move-in {
+      from {
+        background-position-y: -100px;
+      }
+      to {
+        opacity: 1;
+        background-position-y: 0;
+      }
+    }
+    .forest {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: url("../img/Trees.svg")left repeat-x;
+      background-size: cover;
+      background-origin: content-box;
+      width: 100%;
+      height: 50%;
+      opacity: 0;
+      -webkit-animation: forest-move-in 1000ms 500ms forwards;
+      animation: forest-move-in 1000ms 500ms forwards;
+    }
+
+    @-webkit-keyframes forest-move-in {
+      from {
+        background-position-y: 150%;
+      }
+      to {
+        opacity: 1;
+        background-position-y: 100%;
+      }
+    }
+
+    @keyframes forest-move-in {
+      from {
+        background-position-y: 150%;
+      }
+      to {
+        opacity: 1;
+        background-position-y: 100%;
+      }
+    }
+  }
+    div.triangle {
+      width: 0;
+      height: $height-triangle;
+      position: relative;
+      border-left: left-triangle($height-triangle) solid transparent;
+      border-right: right-triangle($height-triangle) solid transparent;
+      border-top: 150px solid black;
+      z-index: -1;
+    }
+}
 #home {
   background: $color-secondary;
-  position: relative;
-  height: max-content;
-  z-index: 1;
   padding: 20px;
+
+  #about {
+
+    text-align: center;
+
+    h1 {
+
+    }
+    p {
+
+    }
+    .imgMe {
+      height: 15vw;
+      float: left;
+    }
+  }
 }
