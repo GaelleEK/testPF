@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/safe.css">
     <title>Test</title>
     <script defer src="./scripts/main.js"></script>
 </head>
 
-<div class="topnav">
-    <a href="#home" class="active"></a>
-    <div id="myLinks">
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </div>
-    <a id="btn-menu" href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
-</div>
+
 
 <div id="main">
+    <div id="nav">
+        <div id="myLinks">
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+        <a id="btn-menu" href="javascript:void(0);" onclick="myFunction()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
     <header id="welcome-section">
             <div class="moon"></div>
             <div class="wrapper">
@@ -43,15 +42,20 @@
         </header>
     <div class="triangle"></div>
 </div>
+
 <div id="home">
     <div id="about">
-        <h1>Qui suis-je ?</h1>
-        <img class="imgMe" src="./img/me.jpg" alt="photo de moi^^">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+        <div class="card">
+            <div class="aboutTitle">Qui suis-je ?</div>
+            <div class="imgMe"></div>
+            <div class="aboutText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio ducimus earum eos est eveniet magni minima, natus non numquam quaerat, quibusdam quis reprehenderit. Eos eum illum nihil nobis rerum.</p>
+            </div>
+        </div>
     </div>
     <div id="myProjects">
     </div>
