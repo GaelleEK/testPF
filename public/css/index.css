@@ -247,35 +247,57 @@ html body a:hover {
 }
 
 #home {
-  background-image: url("../img/bg-city.jpg");
   padding: 20px;
 }
-#home #about {
-  border: solid 2px black;
-  display: flow;
-  text-align: center;
-  padding: 2vw;
+#home .card, #home #myProjects .projectCard {
+  background-color: #fafafa;
+  box-shadow: 12px 12px 4px 2px rgba(0, 0, 255, 0.2);
+  padding: 0 7vw;
+  border: solid 1px #f300b4;
+  border-radius: 10px;
+  margin: 0 8vw;
 }
-#home #about .card {
-  border: solid 2px blue;
-  padding: 0 10vw;
-}
-#home #about .card .aboutTitle {
+#home .card .cardTitle, #home #myProjects .projectCard .cardTitle {
   font-size: 5vw;
   padding: 2vw;
   float: top;
 }
-#home #about .card .imgMe {
+#home .card .cardText, #home #myProjects .projectCard .cardText {
+  padding-left: 25vw;
+  font-size: 2vw;
+}
+#home #about {
+  display: flow;
+  text-align: center;
+  padding: 2vw;
+}
+#home #about .frameImg {
+  background-color: #181d23;
+  transform: rotate(-27deg);
+  float: left;
+}
+#home #about .imgMe {
+  border: solid 1px #252934;
+  transform: rotate(27deg);
   float: left;
   background: url("../img/me.jpg") no-repeat;
   height: 290px;
   width: 222px;
   background-size: 100%;
-  border-radius: 20px;
 }
-#home #about .card .aboutText {
-  padding-left: 4vw;
-  font-size: 2vw;
+#home #myProjects {
+  padding-top: 2vw;
+}
+#home #myProjects .projectCard {
+  border: none;
+  box-shadow: none;
+}
+#home #myProjects .projectCard .img {
+  background-color: black;
+  float: left;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 20vw;
 }
 
 /*# sourceMappingURL=index.css.map */

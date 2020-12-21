@@ -3,6 +3,8 @@
 $color-primary: #252934;
 $color-secondary:   #fafafa;
 $color-hover: #f300b4;
+$color-shadow: rgba(0, 0, 255, .2);
+
 //* fonts *//
 
 @font-face {
@@ -130,13 +132,8 @@ html {
         color: #f300b4;
       }
     }
-      //  fermeture body
     }
-// fermeture html
 }
-
-
-
 
 #main {
   width: 100vw;
@@ -177,8 +174,6 @@ html {
       transition: width 0.4s ease, transform 0.4s ease;
     }
   }
-
-
   #welcome-section{
     width: 100vw;
     height: 100vh;
@@ -305,7 +300,7 @@ html {
       -webkit-animation: forest-move-in 1.2s 1s forwards;
     }
   }
-    div.triangle {
+  div.triangle {
       width: 0;
       height: $height-triangle;
       position: relative;
@@ -315,46 +310,69 @@ html {
       z-index: -1;
     }
 }
+
 #home {
-  background-image: url("../img/bg-city.jpg");
-
+  //background-image: url("../img/bg-city.jpg");
   padding: 20px;
+.card {
+  background-color: $color-secondary;
+  box-shadow: 12px 12px 4px 2px $color-shadow;
+  padding: 0 7vw;
+  border: solid 1px $color-hover;
+  border-radius: 10px;
+  margin: 0 8vw;
 
-  #about {
-    border: solid 2px black;
+.cardTitle {
+  font-size: 5vw;
+  padding: 2vw;
+  float: top;
+}
+
+.cardText {
+  padding-left: 25vw;
+  font-size: 2vw;
+}
+}
+#about {
     display: flow;
     text-align: center;
     padding: 2vw;
 
-
-  .card {
-    border: solid 2px blue;
-    padding: 0 10vw;
-
-
-    .aboutTitle {
-      font-size: 5vw;
-      padding: 2vw;
-      float: top;
+    .frameImg {
+      background-color: #181d23;
+      //border-radius: 15px;
+      transform: rotate(-27deg);
+      float: left;
     }
 
     .imgMe {
-
+      //border-radius: 15px;
+      border: solid 1px $color-primary;
+      transform: rotate(27deg);
       float: left;
       background: url("../img/me.jpg") no-repeat;
       height: 290px;
       width: 222px;
       background-size: 100%;
-      border-radius: 20px;
     }
-
-    .aboutText {
-      padding-left: 4vw;
-      font-size: 2vw;
-    }
+  }
+#myProjects {
+    padding-top: 2vw;
+  .projectCard {
+    @extend .card;
+    border: none;
+    box-shadow: none;
+  .img {
+    background-color: black;
+    float: left;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 20vw;
+  }
   }
 
   }
+
 }
 
 
