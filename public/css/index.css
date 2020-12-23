@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* shadow card */
 @font-face {
   font-family: "Overlock";
   src: local(Overlock), url("../font/Overlock-Black.ttf") format("ttf"), url("../font/overlock-v10-latin-regular.woff") format("woff"), url("../font/overlock-v10-latin-regular.woff2") format("woff2");
@@ -88,7 +89,7 @@ html body {
   padding: 0;
   margin: 0;
   color: #252934;
-  background: #fafafa;
+  background: white;
   font-size: 62.5%;
   font-family: "Overlock", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -251,9 +252,8 @@ html body a:hover {
 }
 #home .card, #home #myProjects .projectCard {
   background-color: #fafafa;
-  box-shadow: 12px 12px 4px 2px rgba(0, 0, 255, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0 7vw;
-  border: solid 1px #f300b4;
   border-radius: 10px;
   margin: 0 8vw;
 }
@@ -264,7 +264,12 @@ html body a:hover {
 }
 #home .card .cardText, #home #myProjects .projectCard .cardText {
   padding-left: 25vw;
+  padding-bottom: 5vw;
   font-size: 2vw;
+}
+#home .card .cardImg, #home #myProjects .projectCard .cardImg {
+  width: 115px;
+  padding: 20px;
 }
 #home #about {
   display: flow;
@@ -272,12 +277,15 @@ html body a:hover {
   padding: 2vw;
 }
 #home #about .frameImg {
-  background-color: #181d23;
+  background-color: #252934;
+  border-radius: 15px;
   transform: rotate(-27deg);
   float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #home #about .imgMe {
-  border: solid 1px #252934;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: rotate(27deg);
   float: left;
   background: url("../img/me.jpg") no-repeat;
@@ -285,12 +293,27 @@ html body a:hover {
   width: 222px;
   background-size: 100%;
 }
+#home #knowing {
+  display: block;
+}
+#home #knowing .card, #home #knowing #myProjects .projectCard, #home #myProjects #knowing .projectCard {
+  background: #fafafa;
+  align-items: center;
+}
+#home #knowing .cardTitle {
+  text-align: center;
+}
+#home #knowing .cardImg img {
+  width: 115px;
+  padding: 20px;
+}
 #home #myProjects {
   padding-top: 2vw;
 }
 #home #myProjects .projectCard {
   border: none;
   box-shadow: none;
+  background: white;
 }
 #home #myProjects .projectCard .img {
   background-color: black;
@@ -298,6 +321,19 @@ html body a:hover {
   width: 15vw;
   height: 15vw;
   border-radius: 20vw;
+}
+
+footer {
+  text-align: center;
+  background-color: #252934;
+  color: #fafafa;
+}
+footer div.triangle2 {
+  width: 0;
+  height: 10px;
+  border-left: 510px solid transparent;
+  border-right: 921px solid transparent;
+  border-top: 68px solid white;
 }
 
 /*# sourceMappingURL=index.css.map */
