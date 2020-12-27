@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
     <title>Test</title>
     <script defer src="./scripts/main.js"></script>
 </head>
@@ -63,12 +63,12 @@
     <div id="knowing">
         <div class="card">
         <h2 class="cardTitle">Mes connaissances</h2>
-        <img class="cardImg" src="img/HTML5.svg">
-        <img class="cardImg" src="img/php-1.svg">
-        <img class="cardImg" src="img/javascript-4.svg">
-        <img class="cardImg" src="img/CSS.3.svg">
-        <img class="cardImg" src="img/bootstrap-4.svg">
-        <img class="cardImg" src="img/sass-1.svg">
+        <img class="cardImg" src="img/HTML5.svg" alt="logo Html5">
+        <img class="cardImg" src="img/php-1.svg" alt="logo PHP">
+        <img class="cardImg" src="img/javascript-4.svg" alt="logo JavaScript">
+        <img class="cardImg" src="img/CSS.3.svg" alt="logo CSS3">
+        <img class="cardImg" src="img/bootstrap-4.svg" alt="logo Bootstrap">
+        <img class="cardImg" src="img/sass-1.svg" alt="logo Sass">
 
         </div>
     </div>
@@ -89,11 +89,28 @@
         </div>
     </div>
 </div>
-<section id="contact-me">
 
-</section>
 <footer>
     <div class="triangle2"></div>
-    <p>2020</p>
-    <p>crée par Gaëlle EL KADAOUI</p>
+    <section id="contact-me">
+        <form method="post" action="../src/index.php" class="contact-me">
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail">Mail</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div class="msg">
+                <label for="msg">Message</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <input class="button" id="submit" type="submit" value="Submit">
+        </form>
+    </section>
+    <div class="footer">
+        <p>2020</p>
+        <p>crée par Gaëlle EL KADAOUI</p>
+    </div>
 </footer>
