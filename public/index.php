@@ -1,14 +1,13 @@
+
 <!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Test</title>
-    <script defer src="./scripts/main.js"></script>
+    <script defer src="scripts/main.js"></script>
 </head>
-
-
 
 <div id="main">
 <!--    <div id="nav">-->
@@ -93,21 +92,25 @@
 <footer>
     <div class="triangle2"></div>
     <section id="contact-me">
-        <form method="post" action="../src/index.php" class="contact-me">
+        <form class="contact-me" action="src/traitement.php" method="post">
             <div>
                 <label for="name">Nom</label>
-                <input type="text" id="name" name="user_name">
+                <input type="text" id="name" name="user_name" required>
             </div>
             <div>
                 <label for="mail">Mail</label>
-                <input type="email" id="mail" name="user_mail">
+                <input type="email" id="mail" name="user_mail" required>
             </div>
             <div class="msg">
                 <label for="msg">Message</label>
-                <textarea id="msg" name="user_message"></textarea>
+                <textarea id="msg" name="user_message" required></textarea>
             </div>
             <input class="button" id="submit" type="submit" value="Submit">
         </form>
+<!--        <div class="alert">-->
+<!--            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>-->
+<!--            This is an alert box.-->
+<!--        </div>-->
     </section>
     <div class="footer">
         <p>2020</p>
