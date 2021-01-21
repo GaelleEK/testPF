@@ -1,0 +1,27 @@
+//* fonctions pr triangle *//
+$width-triangle: 0;
+$height-triangle: 120vw;
+$border-top: 150px;
+////* desktop
+//@media screen and (min-width: 1024px) {
+//  $border-top: 150px;
+//}
+////* tablet
+//@media screen and (min-width: 768px) and (max-width: 1023px) {
+//  $border-top: 100px;
+//}
+//* smartphone
+//@media screen and (max-width: 767px) {
+//  $border-top: 50px;
+//}
+@function left-triangle($height-triangle) {
+  $size: (($height-triangle/100)*25);
+  @return $size
+}
+
+@function right-triangle($height-triangle) {
+  $size: (($height-triangle/100)*60);
+  @return $size
+}
+//essai
+$clip-path-contact: polygon(0 0,20% 100px,100% 0,100% 100%,0 100%);
