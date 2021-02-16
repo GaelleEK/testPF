@@ -1,0 +1,16 @@
+{
+    "name": "acs/test-v2",
+    "authors": [
+        {
+            "name": "gaelleEK",
+            "email": "elkadaouigaelle@gmail.com"
+        }
+    ],
+    "autoload": {
+        "App//": "public/"
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.2",
+        "php": "^8.0"
+    }
+}

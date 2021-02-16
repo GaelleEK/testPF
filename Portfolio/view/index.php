@@ -11,14 +11,10 @@
 </head>
 
 <body>
-<div class="alert">
-    <?php
-    if(isset($_GET['confirm'])) {
+    <?php if(isset($_GET['confirm'])): ?>
+    <div class="alert">"Votre message est envoyé"</div>
+    <?php endif; ?>
 
-        echo "Votre message est envoyé";
-
-    } ?>
-</div>
 <div id="main">
         <header id="welcome-section">
             <div class="moon"></div>
