@@ -7,7 +7,7 @@
         }
     ],
     "autoload": {
-        "App//": "public/"
+        "App//": "Portfolio/"
     },
     "require": {
         "phpmailer/phpmailer": "^6.2",
