@@ -55,7 +55,7 @@
                     <p>Après un petit scroll, vous pourrez voir mes projets.
                         Ils ne sont pas très nombreux mais je travaille chaque jour pour y remédier !</p>
                 </div>
-                <a class="btn-grad" href="../img/Gaelle%20EL%20KADAOUI.pdf" target="_blank">Télécharger mon CV</a>
+                <a class="btn-grad" href="img/Gaelle%20EL%20KADAOUI.pdf" target="_blank">Télécharger mon CV</a>
                 <h2 class="knowingTitle">Petit aperçu non-exhaustif de mes connaissances</h2>
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
